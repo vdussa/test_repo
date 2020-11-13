@@ -9,8 +9,8 @@ RUN apt install iputils-ping \
 -y net-tools
 #RUN mkdir /home/app
 
-COPY app/ /home/app
+COPY main.py home/
 
-WORKDIR /home/app
+WORKDIR home/
 
 CMD [ "python3", "main.py" ]
