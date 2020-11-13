@@ -7,9 +7,10 @@ RUN apt update
 RUN apt install -y python3-pip
 RUN apt install iputils-ping \
 -y net-tools
+#RUN mkdir /home/app
 
-COPY main.py /home
+COPY app/ /home/app
 
-WORKDIR /home
+WORKDIR /home/app
 
 CMD [ "python3", "main.py" ]
